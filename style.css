@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Playfair:wght@300&family=Poppins:wght@500&family=Roboto:wght@300&display=swap');
+
+* {
+    font-family: "Courier New", monospace;
+    background-color: aliceblue;
+}
+
+header {
+    background-color:gray; /* Arrière-plan de l'en-tête */
+    color: #fff; /* Couleur du texte dans l'en-tête */
+    padding: 15px; /* Espace autour du contenu de l'en-tête */
+    border-radius: 10px;
+}
+/* CSS dans votre fichier index.css */
+
+/* Style de base pour la barre de navigation */
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2px;
+    color: #fff;
+    border-radius: 10px;
+    background-color:gray;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    background-color:gray;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: larger;
+    font-weight: bold;
+    background-color:gray;
+    color: whitesmoke;
+}
+
+/* Style au survol des liens */
+nav a:hover {
+    text-decoration: underline;
+    color: darkorchid;
+    background-color:grey;
+}
+
+/* Style pour la barre de recherche */
+.search-box {
+    display: flex;
+    color: darkorchid;
+    background-color:gray;
+}
+
+.search-box input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: darkorchid;
+
+}
+
+.search-box button {
+    background-color: gray;
+    color: darkorchid;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+/* Style au survol du bouton de recherche */
+.search-box button:hover {
+    background-color: #555;
+}
+
+/* Ajout de styles pour rendre la barre de navigation responsive */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav li {
+        margin-right: 0;
+        
+    }
+}
+
+
+/* Style au survol du bouton de recherche */
+.search-box button:hover {
+    background-color: #555;
+}
+
+/* page generale*/
+main {
+    padding: 50px;
+}
+
+@import url('https://fonts.cdnfonts.com/css/kaushan-script');
+.titre h1{
+    text-align: center;
+    margin-top: 15px;
+    color: darkorchid;
+    font-size: 4em;
+    font-family: 'Kaushan Script', cursive;
+}
+
+h2{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 50px;
+    text-decoration: underline;
+    color: darkorchid;
+}
+
+.contact h2{
+    text-align: center;
+}
+
+h3{
+    color: gray;
+    font-size: larger;
+}
+p {
+    font-weight: bold;
+    font-size: large;
+    margin-bottom: 30px;
+    padding-left: 70px;
+    padding-right: 70px;
+}
+
+/*pour la liste des service*/
+.service{
+    display: flex; 
+    list-style: none; 
+    gap: 50px;
+    justify-content: space-around;;
+}
+.service section ul {
+    display: flex;
+    justify-content: space-around;;
+}
+
+.service section li {
+    padding: 20px;
+    list-style: none;
+    margin-top: 30px;
+}
+.service p{
+    padding: 20px;
+    list-style: none;
+    margin-top: 30px;
+}
+.deroule {
+    max-height: 150px;
+    overflow: hidden;
+    transition: 10s ease;
+}
+
+.deroule:hover{
+    max-height:1000px;
+    transition: 5s ease ;
+}
+
+/*choisir*/
+.choisir p{
+    padding: auto;
+    margin-left: 30px;
+}
+
+/* liste imageindex */
+.imageindex1 ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 30px;
+    justify-content: space-around;
+    gap: 20px; /* Espace entre les éléments */
+}
+
+.imageindex1 li img {
+    width: 80%; /* Les images occupent 100% de la largeur de leur conteneur */
+    max-height: 200px; /* Hauteur maximale pour les images */
+    border: 1px solid darkorchid;
+    border-radius: 5px;
+    padding: 10px; /* Espace interne autour des images */
+    box-sizing: border-box; /* Inclut la bordure dans les dimensions */
+}
+
+/* liste imageentreprise */
+.imageentreprise ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    gap: 20px;
+    max-width: 100%; 
+}
+
+.imageentreprise li {
+    margin: 30px 30px;
+    text-align: center;
+    padding: 30px;
+    max-width: 100%; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.imageentreprise li img {
+    width: 100%; /* Les images s'ajustent à la largeur de leur conteneur */
+    max-height: 250px; /* Hauteur maximale pour les images */
+    border: 1px solid darkorchid;
+    border-radius: 5px;
+    width: calc(75% - 30px); 
+    max-height: 400px; 
+}
+
+@media (min-width: 768px) {
+    .imageentreprise ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .imageentreprise li {
+        margin: 10px;
+        width: calc(33.33% - 20px);
+        max-width: none; 
+        text-align: center;
+    }
+}
+
+
+.separator { /*separateur visuel*/
+    width: 100%;
+    height: 3px;
+    background-color: #ccc; /* Couleur de la barre horizontale */
+    margin: 10px 0; /* Marge au-dessus et en dessous de la barre */
+}
+
+footer {
+    background-color:gray;
+    color: darkorchid;
+    padding: 20px; 
+    border-radius: 10px;
+    
+}
+.bas {
+    background-color: gray;
+    color: darkorchid;
+    font-size: small;
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+/* PAGE CONTACT FORMULAIRE */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: gray; 
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: darkorchid;
+}
+
+label {
+    background-color: gray;
+    color: darkorchid;
+    font-weight: bold;
+    font-size: larger;
+    margin-bottom: 10px;
+    display: block;
+}
+
+
+/* Style pour les zones de texte et les boutons */
+input[type="text"],
+select,
+input[type="email"],
+input[type="tel"] {
+    width: 85%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px; 
+    text-align: left;
+    font-weight: bold;
+    font-size: larger;
+    color: darkorchid;
+}
+
+textarea#message {
+    width: 85%;
+    min-height: 100px; /* Hauteur minimale */
+    resize: vertical; /* Permet la redimensionnement vertical */
+}
+
+
+
+/* Style pour le bouton de validation */
+button {
+    background-color: darkorchid;
+    color: gray;
+    font-weight: bold;
+    font-size: larger;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+button:hover {
+    background-color: darkslategray;
+}
+
+
+/* Media query pour la mise en forme responsive */
+@media (max-width: 768px) {
+    form {
+        max-width: 100%; /* Boîte de contact prendra toute la largeur de l'écran */
+        padding: 10px; /* Ajustement de la marge interne pour les petits écrans */
+    }
+    
+    label {
+        margin-bottom: 5px; 
+    }
+}
+/* les region et entrer du telephone*/
+.telephone-input {
+    display: flex;
+    align-items: center;
+}
+
+.telephone-input input[type="tel"] {
+    flex: 1;
+    padding: 10px;
+    margin-right: 10px; /* Espace entre la case de sélection et le champ de saisie */
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    text-align: left;
+}
+
+.mosaique ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    gap: 10px; /* Espace entre les éléments */
+}
+
+.mosaique img {
+    border: 1px solid darkorchid;
+    border-radius: 5px;
+    width: calc(75% - 30px); /* Ajuste la largeur de chaque élément et l'espace entre les éléments pour 4 colonnes */
+    max-height: 400px; /* Hauteur maximale pour les images */
+    object-fit: cover; /* Pour que l'image occupe tout l'espace disponible */
+}
+
+.mosaique li {
+    flex: 0 0 calc(25% - 20px); /* Ajuste la largeur de chaque élément et l'espace entre les éléments pour 4 colonnes */
+    margin: 5px;
+}
